@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <style>  
+        body {
+            background-image: url('https://www.vectorstock.com/royalty-free-vector/head-logo-of-black-panther-roaring-vector-51849390'); /* Replace with your background image URL */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+        .developer-info {
+            margin-top: 20px;
+        }
+        .nuclear-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .verification {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            color: white;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>Submission Successful!</h1>
+    <div id="result"></div>
+    <div class="developer-info">
+        <p>Gowtham Reddy Tadi is the main developer of this website. If you have any queries, please call 9052236775.</p>
+    </div>
+
+    <div class="nuclear-info">
+        <p>
+            Nuclear missiles are powerful weapons that use nuclear reactions to create explosive energy. These missiles are designed to deliver nuclear warheads to a target, causing massive destruction and loss of life. India's former president, Dr. A.P.J. Abdul Kalam, played a pivotal role in the development of India's missile technology. Under his guidance, India successfully tested and deployed a range of missiles capable of carrying nuclear warheads. His vision and leadership were instrumental in ensuring that India had a credible nuclear deterrent, enhancing national security. The advancements made in missile technology under his stewardship have positioned India as a significant player in global defense. Dr. Kalam's legacy continues to inspire innovation and technological development in India.
+        </p>
+    </div>
+
+    <div>
+        <a href="https://youtu.be/RuI2Xftn4wg?si=OUcjqWvXKVG10py2" target="_blank">Watch the main video of our YouTube Channel</a>
+    </div>
+
+    <div class="verification">
+        <p>Please enter your phone number for verification:</p>
+        <input type="text" placeholder="Your Phone Number" />
+    </div>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const branch = urlParams.get('branch');
+
+    document.getElementById('result').innerHTML = `Hello ${name}, you chose the correct way  in ${branch}!`;
+</script>
+
+</body>
+</html>

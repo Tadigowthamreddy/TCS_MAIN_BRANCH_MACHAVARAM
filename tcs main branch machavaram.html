@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Recruitment</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMsiIPPH7ADmFnaTN_BIYrZ75bssytUOSfFg&s'); /* Replace with your image link */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input, select {
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: skyblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>TCS RECRUIMENT PORTAL</h1>
+    <form id="recruitmentForm">
+        <label for="name">Name (CAPITAL LETTERS ONLY):</label>
+        <input type="text" id="name" required>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="degree">Educational Qualification:</label>
+        <select id="degree" required>
+            <option value="">Select Degree</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="M.Sc">M.Sc</option>
+            <option value="MBA">MBA</option>
+        </select>
+
+        <label for="college">College Name:</label>
+        <select id="college" required>
+            <option value="">Select College</option>
+            <option value="College A"> kakinada institute of engineering and technology</option>
+            <option value="College B"> pydah group of institutions </option>
+            <option value="College C"> ideal institute kakinada</option>
+            <option value="College D"> rajamundry institute of engineering and technology</option>
+            <option value="College E"> aditya educational institutions </option>
+        </select>
+
+        <button type="submit">Save data</button>
+    </form>
+
+    <div id="message" style="margin-top: 20px;"></div>
+</div>
+
+<script>
+    document.getElementById('recruitmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var age = document.getElementById('age').value;
+        var name = document.getElementById('name').value.toUpperCase(); // Convert name to uppercase
+        var branch = document.getElementById('branch').value;
+
+        if (age > 18) {
+            alert("You are not eligible. You will be eligible before 18.");
+        } else {
+            // Redirect to the second page with the data
+            window.location.href = `submission.html?name=${encodeURIComponent(name)}&branch=${encodeURIComponent(branch)}`;
+        }
+    });
+</script>
+
+</body>
+</html>
